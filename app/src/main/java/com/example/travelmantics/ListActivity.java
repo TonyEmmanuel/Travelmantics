@@ -59,7 +59,7 @@ public class ListActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         final TravelDealAdapter adapter = new TravelDealAdapter();
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
         FirebaseUtil.attachListener();
         if (FirebaseUtil.mFirebaseAuth.getUid() != null) {
